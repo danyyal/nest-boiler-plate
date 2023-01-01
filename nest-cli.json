@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/als-hq/src",
+  "monorepo": true,
+  "root": "apps/als-hq",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/als-hq/tsconfig.app.json"
+  },
+  "projects": {
+    "als-hq": {
+      "type": "application",
+      "root": "apps/als-hq",
+      "entryFile": "main",
+      "sourceRoot": "apps/als-hq/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/als-hq/tsconfig.app.json"
+      }
+    },
+    "als-vendor": {
+      "type": "application",
+      "root": "apps/als-vendor",
+      "entryFile": "main",
+      "sourceRoot": "apps/als-vendor/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/als-vendor/tsconfig.app.json"
+      }
+    },
+    "als-reporting": {
+      "type": "application",
+      "root": "apps/als-reporting",
+      "entryFile": "main",
+      "sourceRoot": "apps/als-reporting/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/als-reporting/tsconfig.app.json"
+      }
+    },
+    "background-worker": {
+      "type": "application",
+      "root": "apps/background-worker",
+      "entryFile": "main",
+      "sourceRoot": "apps/background-worker/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/background-worker/tsconfig.app.json"
+      }
+    },
+    "core": {
+      "type": "library",
+      "root": "libs/core",
+      "entryFile": "index",
+      "sourceRoot": "libs/core/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/core/tsconfig.lib.json"
+      }
+    },
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared/tsconfig.lib.json"
+      }
+    }
+  }
+}
